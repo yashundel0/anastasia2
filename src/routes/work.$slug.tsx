@@ -6,7 +6,7 @@ export const Route = createFileRoute("/work/$slug")({
   loader: ({ params }) => {
     const i = artworks.findIndex((w) => w.slug === params.slug);
     if (i < 0) throw notFound();
-    return { work: artworks[i], next: artworks[(i + 1) % artworks.length], prev: artworks[(i - 1 + artworks.length) % artworks.length] };
+    return { work: artworks[i]!, next: artworks[(i + 1) % artworks.length]!, prev: artworks[(i - 1 + artworks.length) % artworks.length]! };
   },
   head: ({ loaderData }) => ({
     meta: loaderData
