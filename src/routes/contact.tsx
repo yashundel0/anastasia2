@@ -9,6 +9,8 @@ export const Route = createFileRoute("/contact")({
       { name: "description", content: "Contact Anastasia Evdokimova for commissions, exhibitions and acquisitions. Moscow | Dubai." },
       { property: "og:title", content: "Contact Anastasia Evdokimova" },
       { property: "og:description", content: "Commissions, exhibitions and acquisitions." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: Contact,
@@ -20,7 +22,7 @@ function Contact() {
       <SiteNav />
       <main className="mx-auto max-w-[1200px] px-6 fade-up">
         <h1 className="display text-6xl text-foreground md:text-9xl">C0NTACT \\</h1>
-        <div className="mt-12 space-y-6 text-2xl md:text-4xl">
+        <div className="contact-details mt-12 space-y-6 text-2xl md:text-4xl">
           <a href={`mailto:${contact.email}`} className="block text-foreground underline-offset-8 hover:underline">{contact.email}</a>
           <a href={`tel:${contact.phone}`} className="block text-foreground underline-offset-8 hover:underline">{contact.phone}</a>
           <p className="display text-muted-foreground">{contact.cities}</p>

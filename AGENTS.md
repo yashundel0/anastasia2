@@ -28,3 +28,5 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+- Use ArtworkImage with intrinsic dimensions and lossless responsive asset sources for portfolio media; retain original fallbacks and avoid enlarging or cropping artwork.
