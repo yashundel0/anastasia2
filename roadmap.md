@@ -4,6 +4,7 @@
 - [x] Verify all pages, images and navigation at desktop, tablet and phone sizes (200 page checks, 375–2048px; no overflow, broken images or runtime errors).
 
 # GitHub Pages deployment
+- [ ] Fix catalogue ESM path handling and rerun all tests; inspect production output evidence.
 - [x] Inspect static compatibility and preserve the existing design and configuration wrapper.
 - [ ] Configure the Pages preset, basepath, all concrete public exports and portable artwork.
 - [ ] Add automated artifact validation, regression tests and a GitHub Pages workflow.

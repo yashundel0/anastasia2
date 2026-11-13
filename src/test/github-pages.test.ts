@@ -1,12 +1,23 @@
 import { QueryClient } from "@tanstack/react-query";
 import { createRouter } from "@tanstack/react-router";
 import { describe, expect, it } from "vitest";
+import { execFileSync } from "node:child_process";
+import { resolve } from "node:path";
 import { routeTree } from "@/routeTree.gen";
 import { assetUrl } from "@/lib/asset-url";
 import { artworks } from "@/lib/artworks";
 import { publicPages, pagesBase } from "../../scripts/public-pages.mjs";
 
 describe("GitHub Pages deployment", () => {
+  it("loads the catalogue in native Node ESM independently of the working directory", () => {
+    const script = resolve("scripts/public-pages.mjs");
+    const result = execFileSync(process.execPath, ["--input-type=module", "-e",
+      "const { pathToFileURL } = await import('node:url'); const { publicPages } = await import(pathToFileURL(process.argv[1]).href); console.log(JSON.stringify(publicPages));",
+      script], { cwd: "/tmp", encoding: "utf8" });
+    expect(JSON.parse(result)).toEqual(publicPages);
+    expect(JSON.parse(result)).toHaveLength(20);
+  });
+
   it("keeps navigation inside the requested /anastasia2/ basepath", () => {
     const router = createRouter({ routeTree, basepath: pagesBase, context: { queryClient: new QueryClient() } });
     expect(router.buildLocation({ to: "/about" }).pathname).toBe("/anastasia2/about");
