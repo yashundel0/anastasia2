@@ -1,5 +1,5 @@
 import { QueryClient } from "@tanstack/react-query";
-import { createRouter } from "@tanstack/react-router";
+import { createMemoryHistory, createRouter } from "@tanstack/react-router";
 import { describe, expect, it } from "vitest";
 import { execFileSync } from "node:child_process";
 import { resolve } from "node:path";
@@ -19,11 +19,16 @@ describe("GitHub Pages deployment", () => {
   });
 
   it("keeps navigation inside the requested /anastasia2/ basepath", () => {
-    const router = createRouter({ routeTree, basepath: pagesBase, context: { queryClient: new QueryClient() } });
-    expect(router.buildLocation({ to: "/about" }).pathname).toBe("/anastasia2/about");
-    expect(router.matchRoutes("/anastasia2/contact").at(-1)?.routeId).toBe("/contact");
+    const history = createMemoryHistory({ initialEntries: ["/anastasia2/contact"] });
+    const router = createRouter({ routeTree, history, basepath: pagesBase, context: { queryClient: new QueryClient() } });
+    // TanStack keeps pathname internal; publicHref is the URL used by links.
+    expect(router.buildLocation({ to: "/about" }).publicHref).toBe("/anastasia2/about");
+    expect(router.matchRoutes(router.latestLocation.pathname).at(-1)?.routeId).toBe("/contact");
     for (const work of artworks) {
-      expect(router.matchRoutes(`/anastasia2/work/${work.slug}`).at(-1)?.routeId).toBe("/work/$slug");
+      history.push(`/anastasia2/work/${work.slug}`);
+      router.updateLatestLocation();
+      expect(router.buildLocation({ to: "/work/$slug", params: { slug: work.slug } }).publicHref).toBe(`/anastasia2/work/${work.slug}`);
+      expect(router.matchRoutes(router.latestLocation.pathname).at(-1)?.routeId).toBe("/work/$slug");
     }
   });
 
