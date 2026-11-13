@@ -8,9 +8,26 @@
 // hosting already compresses at the edge.
 // You can pass additional config via defineConfig({ vite: { ... }, etc... }) if needed.
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
+import { pagesBase, publicPages } from "./scripts/public-pages.mjs";
+
+// CI opts into Pages; the existing Lovable preview and hosting keep their root URL.
+const githubPages = process.env.GITHUB_PAGES === "true";
+const base = githubPages ? pagesBase : "/";
 
 export default defineConfig({
+  vite: { base },
+  ...(githubPages ? { nitro: { preset: "github_pages" } } : {}),
   tanstackStart: {
+    router: { basepath: base },
+    pages: publicPages.map((path) => ({ path })),
+    prerender: {
+      enabled: true,
+      autoStaticPathsDiscovery: false,
+      autoSubfolderIndex: true,
+      crawlLinks: false,
+      failOnError: true,
+      concurrency: 4,
+    },
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
     // nitro/vite builds from this
     server: { entry: "server" },
