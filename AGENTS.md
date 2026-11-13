@@ -30,3 +30,6 @@ use the editor.
 <!-- LOVABLE:END -->
 
 - Use ArtworkImage with intrinsic dimensions and lossless responsive asset sources for portfolio media; retain original fallbacks and avoid enlarging or cropping artwork.
+- Keep the Lovable configuration wrapper; opt into GitHub Pages with GITHUB_PAGES=true so the preview retains root-relative routing.
+- Derive static detail exports from the artwork catalogue and validate every exported page before uploading the Pages artifact; static hosting has no runtime server.
+- Mirror asset-pointer media unchanged into generated Pages output and prefix their URLs with Vite's base; retain pointers and responsive dimensions as the source of truth.
