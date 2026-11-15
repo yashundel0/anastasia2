@@ -1,3 +1,9 @@
+# Dark portfolio update
+- [ ] Apply a unified navy/burgundy palette and gradient-only Home header.
+- [ ] Remove Home collection links and rename the menu and collection heading to Artworks without changing URLs.
+- [ ] Apply the exact About biography and supplied portrait, and update all contact details.
+- [ ] Verify navigation, original artworks, layouts and regression tests; preserve Pages configuration.
+
 # Portfolio refinement
 - [x] Present three header backgrounds and apply the user's custom midnight navy and wine selection.
 - [x] Refine Home typography and show five featured works without removing catalogue entries (first five catalogue works selected).
