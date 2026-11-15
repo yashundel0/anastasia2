@@ -1,3 +1,8 @@
+# Home opening-section replacement
+- [x] Replace the existing opening text in place with a centered two-line name and subtitle; remove old links and decorative text.
+- [x] Offer four fonts within the same section, without duplicate headings or artwork backgrounds.
+- [ ] Verify font switching, the single opening section, mobile layout, navigation and regression tests.
+
 # Dark portfolio update
 - [x] Apply a unified navy/burgundy palette and gradient-only Home header.
 - [x] Remove Home collection links and rename the menu and collection heading to Artworks without changing URLs.

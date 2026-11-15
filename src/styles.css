@@ -174,15 +174,30 @@ a:focus-visible { outline: 2px solid var(--ring); outline-offset: 4px; }
   --color-header-midnight: var(--header-midnight);
   --color-header-wine: var(--header-wine);
   --font-home-display: "Barlow Condensed", "Bebas Neue", sans-serif;
+  --font-hero-cormorant: "Cormorant Garamond", Georgia, serif;
+  --font-hero-bodoni: "Bodoni Moda", Georgia, serif;
+  --font-hero-manrope: "Manrope", sans-serif;
 }
 body { background: var(--portfolio-gradient); background-attachment: fixed; }
 body > #root, .min-h-screen.bg-background { background: transparent; }
-.portfolio-hero { background: var(--hero-gradient); min-height: 85svh; }
+.portfolio-hero { background: var(--hero-gradient); min-height: 85svh; justify-content: center; }
 .hero-texture { pointer-events: none; }
 .hero-shade { background: linear-gradient(90deg, color-mix(in oklab, var(--header-midnight) 90%, transparent), color-mix(in oklab, var(--header-midnight) 15%, transparent) 85%); }
 .hero-title, .featured-heading { font-family: var(--font-home-display); font-weight: 300; letter-spacing: 0; }
-.hero-title { line-height: 1.05; }
-.hero-copy { padding-top: 140px; }
+.hero-title { line-height: 1.08; font-size: 88px; }
+.hero-copy { padding: 120px 24px 144px; }
+.hero-font-cormorant { font-family: var(--font-hero-cormorant); font-weight: 300; }
+.hero-font-bodoni { font-family: var(--font-hero-bodoni); font-weight: 400; }
+.hero-font-manrope { font-family: var(--font-hero-manrope); font-weight: 300; }
+.hero-font-barlow { font-family: var(--font-home-display); font-weight: 300; }
+.hero-subtitle { margin-top: 28px; font-size: 14px; font-weight: 300; letter-spacing: 0; }
+.hero-font-picker { position: absolute; bottom: 28px; left: 24px; right: 24px; display: flex; justify-content: center; gap: 4px; }
+.hero-font-option { color: var(--muted-foreground); border-radius: 0; height: 44px; padding: 0 14px; font-size: 14px; border-bottom: 1px solid transparent; }
+.hero-font-option[aria-pressed="true"] { color: var(--ink-foreground); border-color: var(--ink-foreground); }
+.hero-font-option:hover { color: var(--ink-foreground); background: color-mix(in oklab, var(--ink-foreground) 8%, transparent); }
+@media (min-width: 768px) and (max-width: 1023px) {
+  .hero-title { font-size: 68px; }
+}
 .hero-art { left: 35%; width: 65%; }
 .hero-action { background: transparent; color: var(--ink-foreground); border-color: color-mix(in oklab, var(--ink-foreground) 50%, transparent); border-radius: 0; font-weight: 300; font-size: 16px; height: auto; min-height: 44px; white-space: normal; }
 .hero-action:hover { background: var(--ink-foreground); color: var(--header-midnight); }
@@ -205,9 +220,11 @@ body > #root, .min-h-screen.bg-background { background: transparent; }
 .collection-link:hover { background: var(--muted); color: var(--foreground); }
 @media (max-width: 767px) {
   .hero-art { left: 0; width: 100%; }
-  .hero-copy { padding-top: 130px; padding-bottom: 32px; }
+  .hero-copy { padding: 100px 24px 120px; }
   .hero-shade { background: color-mix(in oklab, var(--header-midnight) 65%, transparent); }
-  .hero-title { font-size: 36px; }
+  .hero-title { font-size: 40px; }
+  .hero-subtitle { font-size: 12px; margin-top: 24px; }
+  .hero-font-option { padding: 0 9px; font-size: 13px; }
 }
 @media (prefers-reduced-motion: reduce) {
   .portfolio-menu, .portfolio-menu[data-state], .menu-links a { animation: none; transition: none; }

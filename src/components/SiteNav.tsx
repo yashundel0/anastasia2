@@ -8,10 +8,10 @@ export function SiteNav({ overHero = false }: { overHero?: boolean }) {
   const [open, setOpen] = useState(false);
   return <div className={`site-header ${overHero ? "site-header-hero" : ""}`}>
     <div className="mx-auto flex max-w-[1560px] items-center justify-between gap-6 px-6 py-6 md:px-[9%] sm:py-10">
-      <Link to="/" className="site-identity display">Anastasia Evdokimova</Link>
+      <Link to="/" className={overHero ? "sr-only" : "site-identity display"}>Anastasia Evdokimova</Link>
       <Sheet open={open} onOpenChange={setOpen}>
         <SheetTrigger asChild>
-          <Button variant="ghost" size="icon" className="menu-trigger" aria-label="Open menu" title="Open menu" aria-expanded={open}>
+          <Button variant="ghost" size="icon" className={`menu-trigger ${overHero ? "ml-auto" : ""}`} aria-label="Open menu" title="Open menu" aria-expanded={open}>
             <span className="hamburger" aria-hidden="true"><span /><span /><span /></span>
           </Button>
         </SheetTrigger>
