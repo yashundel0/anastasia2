@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
+import { Route as AllProjectsRouteImport } from './routes/all-projects'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as WorkSlugRouteImport } from './routes/work.$slug'
 
@@ -22,6 +23,11 @@ const IndexRoute = IndexRouteImport.update({
 const AboutRoute = AboutRouteImport.update({
   id: '/about',
   path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AllProjectsRoute = AllProjectsRouteImport.update({
+  id: '/all-projects',
+  path: '/all-projects',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ContactRoute = ContactRouteImport.update({
@@ -38,12 +44,14 @@ const WorkSlugRoute = WorkSlugRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/all-projects': typeof AllProjectsRoute
   '/contact': typeof ContactRoute
   '/work/$slug': typeof WorkSlugRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/all-projects': typeof AllProjectsRoute
   '/contact': typeof ContactRoute
   '/work/$slug': typeof WorkSlugRoute
 }
@@ -51,20 +59,22 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/all-projects': typeof AllProjectsRoute
   '/contact': typeof ContactRoute
   '/work/$slug': typeof WorkSlugRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/about' | '/contact' | '/work/$slug'
+  fullPaths: '/' | '/about' | '/all-projects' | '/contact' | '/work/$slug'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/contact' | '/work/$slug'
-  id: '__root__' | '/' | '/about' | '/contact' | '/work/$slug'
+  to: '/' | '/about' | '/all-projects' | '/contact' | '/work/$slug'
+  id: '__root__' | '/' | '/about' | '/all-projects' | '/contact' | '/work/$slug'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
+  AllProjectsRoute: typeof AllProjectsRoute
   ContactRoute: typeof ContactRoute
   WorkSlugRoute: typeof WorkSlugRoute
 }
@@ -83,6 +93,13 @@ declare module '@tanstack/react-router' {
       path: '/about'
       fullPath: '/about'
       preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/all-projects': {
+      id: '/all-projects'
+      path: '/all-projects'
+      fullPath: '/all-projects'
+      preLoaderRoute: typeof AllProjectsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/contact': {
@@ -105,6 +122,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
+  AllProjectsRoute: AllProjectsRoute,
   ContactRoute: ContactRoute,
   WorkSlugRoute: WorkSlugRoute,
 }
