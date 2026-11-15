@@ -1,6 +1,6 @@
 # Reference typography
-- [ ] Replace only Home name/subtitle typography with thin, wide same-family lettering; exact source font unconfirmed.
-- [ ] Verify desktop/mobile font loading, name/subtitle weight hierarchy and unchanged navigation.
+- [x] Replace only Home name/subtitle typography with thin, wide Montserrat lettering (200/100 weights); exact source font unconfirmed.
+- [x] Verify font loading, one heading/section, no overflow at 375/1001/1280px, unchanged menu navigation; routing test passed, automatic build OK.
 
 # Home opening-section replacement
 - [x] Replace the existing opening text in place with a centered two-line name and subtitle; remove old links and decorative text.
