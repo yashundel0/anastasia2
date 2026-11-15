@@ -1,3 +1,10 @@
+# Portfolio refinement
+- [ ] Present three header backgrounds and apply the user's selection.
+- [ ] Refine Home typography and show five featured works without removing catalogue entries.
+- [ ] Add All Projects using the shared catalogue and retain all existing detail URLs.
+- [ ] Replace navigation with an accessible animated hamburger menu.
+- [ ] Verify gallery images, navigation, responsive layouts and regression tests.
+
 # Website image and responsive audit
 - [x] Preserve complete artwork proportions and add responsive image sources without changing originals.
 - [x] Correct hero, navigation, About, Contact and artwork layouts at all requested widths.
