@@ -1,7 +1,7 @@
 # Home opening-section replacement
 - [x] Replace the existing opening text in place with a centered two-line name and subtitle; remove old links and decorative text.
 - [x] Offer four fonts within the same section, without duplicate headings or artwork backgrounds.
-- [ ] Verify font switching, the single opening section, mobile layout, navigation and regression tests.
+- [x] Verify all four fonts, one heading and section, removal of old text, layouts at 375/1002/1280px and menu navigation; 11 tests passed, automatic build OK, no runtime errors.
 
 # Dark portfolio update
 - [x] Apply a unified navy/burgundy palette and gradient-only Home header.
