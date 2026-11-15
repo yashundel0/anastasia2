@@ -45,4 +45,6 @@ export const artworks: Artwork[] = [
   a("regression", "Regression", 2017, regression.url, "Painting, Portrait"),
 ];
 
+export const featuredArtworks = artworks.slice(0, 5);
+
 export const contact = { email: "evdokimovasia@gmail.com", phone: "+79250420085", cities: "Moscow | Dubai" };

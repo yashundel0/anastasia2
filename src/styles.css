@@ -109,7 +109,7 @@
 }
 
 @layer base { body { font-family: var(--font-sans); } }
-.display { font-family: var(--font-display); text-transform: uppercase; letter-spacing: 0.005em; }
+.display { font-family: var(--font-display); text-transform: uppercase; letter-spacing: 0; }
 .hero-shade { background: linear-gradient(90deg, color-mix(in oklab, var(--ink) 65%, transparent), transparent 70%); }
 .hero-zoom { animation: hero-zoom 18s ease-out both; }
 @keyframes hero-zoom { from { transform: scale(1.08); } to { transform: scale(1); } }
@@ -120,7 +120,7 @@
 .nav-link { font-size: .8rem; font-weight: 600; text-transform: uppercase; letter-spacing: .02em; color: var(--muted-foreground); transition: color .2s; }
 .nav-link:hover, .nav-link-active { color: var(--foreground); }
 .cover-img { transition: transform .6s cubic-bezier(.2,.7,.2,1), opacity .4s; }
-.cover:hover .cover-img { transform: scale(1.04); opacity: .85; }
+.cover:hover .cover-img { opacity: .9; }
 .fade-up { animation: fade-up .6s ease-out both; }
 @keyframes fade-up { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
 
@@ -159,4 +159,48 @@ a:focus-visible { outline: 2px solid var(--ring); outline-offset: 4px; }
   .hero-zoom, .fade-up { animation: none; }
   .cover-img { transition: none; }
   .cover:hover .cover-img { transform: none; }
+}
+
+/* Home retains condensed proportions with a genuinely lighter font face. */
+:root {
+  --header-midnight: oklch(0.17 0.035 255);
+  --header-wine: oklch(0.24 0.06 15);
+}
+@theme inline {
+  --color-header-midnight: var(--header-midnight);
+  --color-header-wine: var(--header-wine);
+  --font-home-display: "Barlow Condensed", "Bebas Neue", sans-serif;
+}
+.portfolio-hero { background: var(--header-midnight); min-height: 85svh; }
+.hero-texture { pointer-events: none; }
+.hero-shade { background: linear-gradient(90deg, color-mix(in oklab, var(--header-midnight) 90%, transparent), color-mix(in oklab, var(--header-midnight) 15%, transparent) 85%); }
+.hero-title, .featured-heading { font-family: var(--font-home-display); font-weight: 300; letter-spacing: 0; }
+.hero-title { line-height: 1.05; }
+.hero-copy { padding-top: 140px; }
+.hero-art { left: 35%; width: 65%; }
+.hero-action { background: transparent; color: var(--ink-foreground); border-color: color-mix(in oklab, var(--ink-foreground) 50%, transparent); border-radius: 0; font-weight: 300; font-size: 16px; height: auto; min-height: 44px; white-space: normal; }
+.hero-action:hover { background: var(--ink-foreground); color: var(--header-midnight); }
+.site-header { position: relative; z-index: 20; }
+.site-header-hero { position: absolute; top: 0; left: 0; width: 100%; color: var(--ink-foreground); }
+.site-identity { font-size: 22px; line-height: 1.1; font-weight: 400; }
+.menu-trigger { color: inherit; width: 48px; height: 48px; border-radius: 0; flex-shrink: 0; }
+.menu-trigger:hover { color: inherit; background: color-mix(in oklab, currentColor 10%, transparent); }
+.hamburger { width: 26px; height: 20px; display: flex; flex-direction: column; justify-content: space-between; }
+.hamburger span { width: 100%; height: 1px; background: currentColor; }
+.portfolio-menu { width: min(420px, 100%); max-width: 100%; display: flex; flex-direction: column; padding: 80px 32px 40px; border-radius: 0; }
+.portfolio-menu > button { min-width: 44px; min-height: 44px; }
+.menu-links { display: flex; flex-direction: column; gap: 20px; margin-top: 64px; }
+.menu-links a { font-family: var(--font-display); font-size: 48px; font-weight: 400; line-height: 1.2; color: var(--muted-foreground); transition: color .2s; }
+.menu-links a:hover, .menu-links a.menu-link-active { color: var(--foreground); }
+.menu-email { margin-top: auto; overflow-wrap: anywhere; }
+.collection-link { border-radius: 0; min-height: 44px; font-weight: 400; }
+.collection-link:hover { background: var(--muted); color: var(--foreground); }
+@media (max-width: 767px) {
+  .hero-art { left: 0; width: 100%; }
+  .hero-copy { padding-top: 130px; padding-bottom: 32px; }
+  .hero-shade { background: color-mix(in oklab, var(--header-midnight) 65%, transparent); }
+  .hero-title { font-size: 36px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .portfolio-menu, .portfolio-menu[data-state], .menu-links a { animation: none; transition: none; }
 }

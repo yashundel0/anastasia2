@@ -8,5 +8,5 @@ import { fileURLToPath } from "node:url";
 const scriptDirectory = dirname(fileURLToPath(import.meta.url));
 const catalogue = readFileSync(resolve(scriptDirectory, "../src/lib/artworks.ts"), "utf8");
 export const artworkSlugs = [...catalogue.matchAll(/\ba\("([^"]+)"/g)].map((match) => match[1]);
-export const publicPages = ["/", "/about", "/contact", ...artworkSlugs.map((slug) => `/work/${slug}`)];
+export const publicPages = ["/", "/all-projects", "/about", "/contact", ...artworkSlugs.map((slug) => `/work/${slug}`)];
 export const pagesBase = "/anastasia2/";

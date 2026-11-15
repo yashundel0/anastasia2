@@ -15,12 +15,13 @@ describe("GitHub Pages deployment", () => {
       "const { pathToFileURL } = await import('node:url'); const { publicPages } = await import(pathToFileURL(process.argv[1]).href); console.log(JSON.stringify(publicPages));",
       script], { cwd: "/tmp", encoding: "utf8" });
     expect(JSON.parse(result)).toEqual(publicPages);
-    expect(JSON.parse(result)).toHaveLength(20);
+    expect(JSON.parse(result)).toHaveLength(21);
   });
 
   it("keeps navigation inside the requested /anastasia2/ basepath", () => {
     const history = createMemoryHistory({ initialEntries: ["/anastasia2/contact"] });
     const router = createRouter({ routeTree, history, basepath: pagesBase, context: { queryClient: new QueryClient() } });
+    expect(router.buildLocation({ to: "/all-projects" }).publicHref).toBe("/anastasia2/all-projects");
     // TanStack keeps pathname internal; publicHref is the URL used by links.
     expect(router.buildLocation({ to: "/about" }).publicHref).toBe("/anastasia2/about");
     expect(router.matchRoutes(router.latestLocation.pathname).at(-1)?.routeId).toBe("/contact");
@@ -32,9 +33,9 @@ describe("GitHub Pages deployment", () => {
     }
   });
 
-  it("exports all 20 public pages including every concrete artwork URL", () => {
-    expect(publicPages).toEqual(["/", "/about", "/contact", ...artworks.map((work) => `/work/${work.slug}`)]);
-    expect(publicPages).toHaveLength(20);
+  it("exports all 21 public pages including every concrete artwork URL", () => {
+    expect(publicPages).toEqual(["/", "/all-projects", "/about", "/contact", ...artworks.map((work) => `/work/${work.slug}`)]);
+    expect(publicPages).toHaveLength(21);
   });
 
   it("prefixes both original and responsive media without altering the image identity", () => {

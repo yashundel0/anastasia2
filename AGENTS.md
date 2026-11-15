@@ -34,3 +34,6 @@ use the editor.
 - With Nitro's entryless static preset, provide a build-only fetch adapter for Vite's server environment; retain TanStack's dedicated SSR entry and deploy only public output.
 - Derive static detail exports from the artwork catalogue and validate every exported page before uploading the Pages artifact; static hosting has no runtime server.
 - Mirror asset-pointer media unchanged into generated Pages output and prefix their URLs with Vite's base; retain pointers and responsive dimensions as the source of truth.
+
+- Render featured and complete collections through ArtworkGallery from one catalogue; keeping the curated selection separate preserves every detail page.
+- Use the shared Sheet and Button for header navigation to retain focus management and keyboard dismissal on every page.

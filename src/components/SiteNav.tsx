@@ -1,14 +1,32 @@
 import { Link } from "@tanstack/react-router";
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 
-export function SiteNav() {
-  return (
-    <nav aria-label="Main navigation" className="site-nav mx-auto grid max-w-[1560px] grid-cols-[minmax(0,1fr)_auto_auto_auto] items-center gap-3 px-6 py-6 sm:flex sm:justify-end sm:gap-6 sm:py-10 md:px-[9%]">
-      <Link to="/" className="nav-link" activeProps={{ className: "nav-link nav-link-active" }} activeOptions={{ exact: true }}>All Projects</Link>
-      <Link to="/about" className="nav-link" activeProps={{ className: "nav-link nav-link-active" }}>About</Link>
-      <Link to="/contact" className="nav-link" activeProps={{ className: "nav-link nav-link-active" }}>Contact</Link>
-      <a href="mailto:evdokimovasia@gmail.com" className="nav-link" aria-label="Email">@</a>
-    </nav>
-  );
+export function SiteNav({ overHero = false }: { overHero?: boolean }) {
+  const [open, setOpen] = useState(false);
+  return <div className={`site-header ${overHero ? "site-header-hero" : ""}`}>
+    <div className="mx-auto flex max-w-[1560px] items-center justify-between gap-6 px-6 py-6 md:px-[9%] sm:py-10">
+      <Link to="/" className="site-identity display">Anastasia Evdokimova</Link>
+      <Sheet open={open} onOpenChange={setOpen}>
+        <SheetTrigger asChild>
+          <Button variant="ghost" size="icon" className="menu-trigger" aria-label="Open menu" title="Open menu" aria-expanded={open}>
+            <span className="hamburger" aria-hidden="true"><span /><span /><span /></span>
+          </Button>
+        </SheetTrigger>
+        <SheetContent className="portfolio-menu" aria-describedby={undefined}>
+          <SheetTitle className="sr-only">Navigation</SheetTitle>
+          <Link to="/" className="display text-2xl text-muted-foreground" onClick={() => setOpen(false)}>Anastasia Evdokimova</Link>
+          <nav aria-label="Main navigation" className="menu-links">
+            <Link to="/all-projects" activeProps={{ className: "menu-link-active" }} onClick={() => setOpen(false)}>All Projects</Link>
+            <Link to="/about" activeProps={{ className: "menu-link-active" }} onClick={() => setOpen(false)}>About</Link>
+            <Link to="/contact" activeProps={{ className: "menu-link-active" }} onClick={() => setOpen(false)}>Contact</Link>
+          </nav>
+          <a href="mailto:evdokimovasia@gmail.com" className="menu-email text-sm text-muted-foreground">evdokimovasia@gmail.com</a>
+        </SheetContent>
+      </Sheet>
+    </div>
+  </div>;
 }
 
 export function SiteFooter() {
