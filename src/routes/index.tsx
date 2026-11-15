@@ -1,9 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useState } from "react";
 import { featuredArtworks } from "@/lib/artworks";
 import { SiteNav, SiteFooter } from "@/components/SiteNav";
 import { ArtworkGallery } from "@/components/ArtworkGallery";
-import { Button } from "@/components/ui/button";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -20,32 +18,16 @@ export const Route = createFileRoute("/")({
 });
 
 function Index() {
-  const [font, setFont] = useState("cormorant");
-  const fonts = [
-    { value: "cormorant", label: "Cormorant" },
-    { value: "bodoni", label: "Bodoni" },
-    { value: "manrope", label: "Manrope" },
-    { value: "barlow", label: "Barlow" },
-  ];
   return (
     <div className="min-h-screen bg-background">
       <header className="portfolio-hero relative flex items-center overflow-hidden bg-ink">
         <SiteNav overHero />
         <div className="hero-copy relative w-full text-center">
-          <h1 className={`hero-title hero-font-${font} text-ink-foreground`}>
+          <h1 className="hero-title text-ink-foreground">
             <span className="block">ANASTASIA</span>
             <span className="block">EVDOKIMOVA</span>
           </h1>
           <p className="hero-subtitle text-ink-foreground">CONTEMPORARY ARTIST</p>
-        </div>
-        <div role="group" aria-label="Hero typography" className="hero-font-picker">
-          {fonts.map((option) => (
-            <Button key={option.value} variant="ghost" aria-pressed={font === option.value}
-              title={`Preview ${option.label}`} onClick={() => setFont(option.value)}
-              className={`hero-font-option hero-font-${option.value}`}>
-              {option.label}
-            </Button>
-          ))}
         </div>
       </header>
 
