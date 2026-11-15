@@ -212,8 +212,7 @@ body > #root, .min-h-screen.bg-background { background: transparent; }
   .hero-copy { padding: 100px 24px 120px; }
   .hero-shade { background: color-mix(in oklab, var(--header-midnight) 65%, transparent); }
   .hero-title { font-size: 40px; }
-  .hero-subtitle { font-size: 12px; margin-top: 24px; }
-  .hero-font-option { padding: 0 9px; font-size: 13px; }
+  .hero-subtitle { font-size: 14px; margin-top: 24px; }
 }
 @media (prefers-reduced-motion: reduce) {
   .portfolio-menu, .portfolio-menu[data-state], .menu-links a { animation: none; transition: none; }
