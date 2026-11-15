@@ -212,3 +212,7 @@ body > #root, .min-h-screen.bg-background { background: transparent; }
 @media (prefers-reduced-motion: reduce) {
   .portfolio-menu, .portfolio-menu[data-state], .menu-links a { animation: none; transition: none; }
 }
+
+/* Centered editorial hero name. */
+.hero-name { font-family: var(--font-home-display); font-weight: 300; font-size: clamp(56px, 11vw, 150px); line-height: .95; letter-spacing: .02em; }
+.hero-subtitle { margin-top: 28px; font-size: clamp(13px, 1.4vw, 18px); font-weight: 300; text-transform: uppercase; letter-spacing: .45em; padding-left: .45em; opacity: .85; }
