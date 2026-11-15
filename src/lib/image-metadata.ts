@@ -1,4 +1,13 @@
 export const imageMetadata = {
+  "artist-portrait": {
+    "width": 1191,
+    "height": 1321,
+    "sources": [
+      { "width": 320, "url": "/__l5e/assets-v1/90559ab4-5856-4dd8-a41a-42f531632bc6/artist-portrait-320.webp" },
+      { "width": 640, "url": "/__l5e/assets-v1/b35cf5b0-55ea-41db-9203-e3bf7ea7f699/artist-portrait-640.webp" },
+      { "width": 1191, "url": "/__l5e/assets-v1/a7682bba-d387-41db-823d-56a0a2fb2a94/artist-portrait-1191.webp" }
+    ]
+  },
   "the-eternal-passage": {
     "width": 671,
     "height": 983,

@@ -1,10 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { featuredArtworks, heroImage } from "@/lib/artworks";
+import { featuredArtworks } from "@/lib/artworks";
 import { SiteNav, SiteFooter } from "@/components/SiteNav";
-import { ArtworkImage } from "@/components/ArtworkImage";
 import { ArtworkGallery } from "@/components/ArtworkGallery";
 import { Button } from "@/components/ui/button";
-import midnightTexture from "@/assets/midnight-wine-texture.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -24,9 +22,6 @@ function Index() {
   return (
     <div className="min-h-screen bg-background">
       <header className="portfolio-hero relative flex items-center overflow-hidden bg-ink">
-        <img src={midnightTexture} alt="" width={1920} height={1024} fetchPriority="high" className="hero-texture absolute inset-0 h-full w-full object-cover" />
-        <ArtworkImage imageKey="hero-cover" src={heroImage} alt="Painting by Anastasia Evdokimova" fetchPriority="high" loading="eager" className="hero-art absolute inset-0 h-full w-full hero-zoom" />
-        <div className="absolute inset-0 hero-shade" />
         <SiteNav overHero />
         <div className="hero-copy relative w-full max-w-[900px] pb-10 pt-32">
           <h1 className="hero-title display leading-[0.92] text-ink-foreground">
@@ -44,12 +39,8 @@ function Index() {
       <main id="work" className="mx-auto max-w-[1560px] px-6 pt-10 md:px-[9%]">
         <div className="mb-10 flex flex-wrap items-center justify-between gap-6">
           <h2 className="display featured-heading text-4xl text-foreground">Featured Works</h2>
-          <Button asChild variant="link" className="collection-link"><Link to="/all-projects">All Projects ↗</Link></Button>
         </div>
         <ArtworkGallery works={featuredArtworks} />
-        <div className="mt-12 flex justify-center">
-          <Button asChild variant="outline" className="collection-link"><Link to="/all-projects">View all projects →</Link></Button>
-        </div>
       </main>
       <SiteFooter />
     </div>

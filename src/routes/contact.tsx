@@ -24,7 +24,8 @@ function Contact() {
         <h1 className="display text-6xl text-foreground md:text-9xl">C0NTACT \\</h1>
         <div className="contact-details mt-12 space-y-6 text-2xl md:text-4xl">
           <a href={`mailto:${contact.email}`} className="block text-foreground underline-offset-8 hover:underline">{contact.email}</a>
-          <a href={`tel:${contact.phone}`} className="block text-foreground underline-offset-8 hover:underline">{contact.phone}</a>
+          <a href={contact.phoneHref} className="block text-foreground underline-offset-8 hover:underline">{contact.phone}</a>
+          <a href={contact.instagram} target="_blank" rel="noopener noreferrer" className="block text-foreground underline-offset-8 hover:underline">Instagram ↗</a>
           <p className="display text-muted-foreground">{contact.cities}</p>
         </div>
       </main>
