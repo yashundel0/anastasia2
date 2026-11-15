@@ -2,6 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
+import { contact } from "@/lib/artworks";
 
 export function SiteNav({ overHero = false }: { overHero?: boolean }) {
   const [open, setOpen] = useState(false);
@@ -18,11 +19,11 @@ export function SiteNav({ overHero = false }: { overHero?: boolean }) {
           <SheetTitle className="sr-only">Navigation</SheetTitle>
           <Link to="/" className="display text-2xl text-muted-foreground" onClick={() => setOpen(false)}>Anastasia Evdokimova</Link>
           <nav aria-label="Main navigation" className="menu-links">
-            <Link to="/all-projects" activeProps={{ className: "menu-link-active" }} onClick={() => setOpen(false)}>All Projects</Link>
+            <Link to="/all-projects" activeProps={{ className: "menu-link-active" }} onClick={() => setOpen(false)}>Artworks</Link>
             <Link to="/about" activeProps={{ className: "menu-link-active" }} onClick={() => setOpen(false)}>About</Link>
             <Link to="/contact" activeProps={{ className: "menu-link-active" }} onClick={() => setOpen(false)}>Contact</Link>
           </nav>
-          <a href="mailto:evdokimovasia@gmail.com" className="menu-email text-sm text-muted-foreground">evdokimovasia@gmail.com</a>
+          <a href={`mailto:${contact.email}`} className="menu-email text-sm text-muted-foreground">{contact.email}</a>
         </SheetContent>
       </Sheet>
     </div>

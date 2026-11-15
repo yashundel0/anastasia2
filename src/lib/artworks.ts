@@ -17,9 +17,11 @@ import dusk from "@/assets/art/dusk-and-dawn.jpg.asset.json";
 import vision from "@/assets/art/vision-beyond-time.jpg.asset.json";
 import hero from "@/assets/art/hero-cover.jpg.asset.json";
 import studio from "@/assets/art/artist-studio.jpg.asset.json";
+import portrait from "@/assets/art/artist-portrait.jpg.asset.json";
 
 export const heroImage = hero.url;
 export const studioImage = studio.url;
+export const portraitImage = portrait.url;
 
 export type Artwork = { slug: string; title: string; year: number; image: string; tags: string };
 
@@ -47,4 +49,4 @@ export const artworks: Artwork[] = [
 
 export const featuredArtworks = artworks.slice(0, 5);
 
-export const contact = { email: "evdokimovasia@gmail.com", phone: "+79250420085", cities: "Moscow | Dubai" };
+export const contact = { email: "siaevdokimova@gmail.com", phone: "+971 555 790995", phoneHref: "tel:+971555790995", instagram: "https://www.instagram.com/sia_evdokimova?vrfl=NGpkbTZreGF1NnE2", cities: "Dubai" };
