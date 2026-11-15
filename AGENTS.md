@@ -38,3 +38,4 @@ use the editor.
 - Render featured and complete collections through ArtworkGallery from one catalogue; keeping the curated selection separate preserves every detail page.
 - Use the shared Sheet and Button for header navigation to retain focus management and keyboard dismissal on every page.
 - Keep contact destinations in the shared catalogue so the menu and Contact page cannot diverge.
+- Keep Home typography comparison in the existing header with one state-driven heading; font previews must not duplicate sections or artist names.
