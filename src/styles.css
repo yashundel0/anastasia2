@@ -11,6 +11,17 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/* Self-hosted Ablation (free demo, Regular only) — bundled by Vite so the
+   relative URL inherits the correct base path on GitHub Pages. */
+@font-face {
+  font-family: "Ablation";
+  src: url("./assets/fonts/ablation-regular.woff2") format("woff2"),
+    url("./assets/fonts/Ablation_PersonalUse.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 /*
  * Design system definition.
  *
@@ -174,7 +185,7 @@ a:focus-visible { outline: 2px solid var(--ring); outline-offset: 4px; }
   --color-header-midnight: var(--header-midnight);
   --color-header-wine: var(--header-wine);
   --font-home-display: "Barlow Condensed", "Bebas Neue", sans-serif;
-  --font-hero-display: "Montserrat", sans-serif;
+  --font-hero-display: "Ablation", sans-serif;
 }
 body { background: var(--portfolio-gradient); background-attachment: fixed; }
 body > #root, .min-h-screen.bg-background { background: transparent; }
@@ -182,9 +193,9 @@ body > #root, .min-h-screen.bg-background { background: transparent; }
 .hero-texture { pointer-events: none; }
 .hero-shade { background: linear-gradient(90deg, color-mix(in oklab, var(--header-midnight) 90%, transparent), color-mix(in oklab, var(--header-midnight) 15%, transparent) 85%); }
 .hero-title, .featured-heading { font-family: var(--font-home-display); font-weight: 300; letter-spacing: 0; }
-.hero-title { font-family: var(--font-hero-display); font-weight: 200; line-height: 1.08; font-size: 88px; }
+.hero-title { font-family: var(--font-hero-display); font-weight: 600; line-height: 1.08; font-size: 88px; letter-spacing: 0.04em; }
 .hero-copy { padding: 120px 24px; }
-.hero-subtitle { margin-top: 28px; font-family: var(--font-hero-display); font-size: 20px; font-weight: 100; letter-spacing: 0; }
+.hero-subtitle { margin-top: 28px; font-family: var(--font-hero-display); font-size: 20px; font-weight: 300; letter-spacing: 0.35em; }
 @media (min-width: 768px) and (max-width: 1023px) {
   .hero-title { font-size: 68px; }
 }
