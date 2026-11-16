@@ -1,7 +1,7 @@
 # Unified Home and Artworks galleries
 - [x] Make both galleries caption-free for every artwork without altering detail pages or order.
 - [ ] Remove the second image's embedded white edge: requires an original photo without the edge; the supplied full-resolution original includes it and cropping is forbidden.
-- [ ] Verify both galleries and both detail flows on phone and desktop, preserving Geometry of Time description.
+- [x] Verified caption-free galleries and both detail flows at 375/1280px, plus full unchanged description at 375/768/1002/1280px; 13 tests passed, automatic build OK.
 
 # Artwork display and Geometry of Time
 - [x] Diagnose fixed-ratio gallery padding and detail-page dark padded backgrounds.
