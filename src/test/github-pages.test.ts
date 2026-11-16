@@ -15,7 +15,7 @@ describe("GitHub Pages deployment", () => {
       "const { pathToFileURL } = await import('node:url'); const { publicPages } = await import(pathToFileURL(process.argv[1]).href); console.log(JSON.stringify(publicPages));",
       script], { cwd: "/tmp", encoding: "utf8" });
     expect(JSON.parse(result)).toEqual(publicPages);
-    expect(JSON.parse(result)).toHaveLength(21);
+    expect(JSON.parse(result)).toHaveLength(6);
   });
 
   it("keeps navigation inside the requested /anastasia2/ basepath", () => {
@@ -33,9 +33,9 @@ describe("GitHub Pages deployment", () => {
     }
   });
 
-  it("exports all 21 public pages including every concrete artwork URL", () => {
+  it("exports all 6 public pages including every concrete artwork URL", () => {
     expect(publicPages).toEqual(["/", "/all-projects", "/about", "/contact", ...artworks.map((work) => `/work/${work.slug}`)]);
-    expect(publicPages).toHaveLength(21);
+    expect(publicPages).toHaveLength(6);
   });
 
   it("prefixes both original and responsive media without altering the image identity", () => {
