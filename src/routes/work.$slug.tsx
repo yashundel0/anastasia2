@@ -16,10 +16,10 @@ export const Route = createFileRoute("/work/$slug")({
   head: ({ loaderData }) => ({
     meta: loaderData
       ? [
-          { title: `${loaderData.work.title} (${loaderData.work.year}) — Anastasia Evdokimova` },
-          { name: "description", content: `${loaderData.work.title}, ${loaderData.work.year}. Original painting by Anastasia Evdokimova.` },
+          { title: `${loaderData.work.title}${loaderData.work.year ? ` (${loaderData.work.year})` : ""} — Anastasia Evdokimova` },
+          { name: "description", content: `${loaderData.work.title}${loaderData.work.year ? `, ${loaderData.work.year}` : ""}. Original painting by Anastasia Evdokimova.` },
           { property: "og:title", content: `${loaderData.work.title} — Anastasia Evdokimova` },
-          { property: "og:description", content: `Original painting, ${loaderData.work.year}.` },
+          { property: "og:description", content: `Original painting${loaderData.work.year ? `, ${loaderData.work.year}` : ""}.` },
           { property: "og:type", content: "website" },
           { name: "twitter:card", content: "summary_large_image" },
         ]
@@ -35,9 +35,9 @@ function Work() {
       <SiteNav />
       <article key={work.slug} className="mx-auto max-w-[1200px] px-6 fade-up">
         <h1 className="work-title display text-5xl text-foreground md:text-7xl">{work.title}</h1>
-        <p className="mt-3 text-sm text-muted-foreground">Original painting by Anastasia Evdokimova. {work.year}. {work.tags}.</p>
+        <p className="mt-3 text-sm text-muted-foreground">Original painting by Anastasia Evdokimova.{work.year ? ` ${work.year}.` : ""}{work.tags ? ` ${work.tags}.` : ""}</p>
         <div className="work-frame mt-10 flex items-center justify-center bg-ink p-4 sm:p-6 md:p-16">
-          <ArtworkImage imageKey={work.slug as keyof typeof import("@/lib/image-metadata").imageMetadata} src={work.image} alt={`${work.title}, ${work.year}`} fetchPriority="high" sizes="(min-width: 1200px) 1024px, (min-width: 768px) calc(100vw - 176px), calc(100vw - 80px)" className="work-image" />
+          <ArtworkImage imageKey={work.slug as keyof typeof import("@/lib/image-metadata").imageMetadata} src={work.image} alt={work.year ? `${work.title}, ${work.year}` : work.title} fetchPriority="high" sizes="(min-width: 1200px) 1024px, (min-width: 768px) calc(100vw - 176px), calc(100vw - 80px)" className="work-image" />
         </div>
         <div className="work-navigation mt-10 grid grid-cols-2 gap-4">
           <Link to="/work/$slug" params={{ slug: prev.slug }} className="btn-outline-dark">← {prev.title}</Link>
