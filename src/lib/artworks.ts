@@ -1,5 +1,5 @@
 import artwork1 from "@/assets/art/artwork-1.jpeg.asset.json";
-import artwork2 from "@/assets/art/artwork-2.jpg.asset.json";
+import artwork2 from "@/assets/art/artwork-2-original-borderless.jpg.asset.json";
 import hero from "@/assets/art/hero-cover.jpg.asset.json";
 import studio from "@/assets/art/artist-studio.jpg.asset.json";
 import portrait from "@/assets/art/artist-portrait.jpg.asset.json";
