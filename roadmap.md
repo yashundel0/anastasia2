@@ -1,3 +1,7 @@
+# Typography refinement
+- [ ] Preserve Home Ablation typography and apply locally hosted Inter Regular/Medium everywhere else.
+- [ ] Verify fonts, text readability, navigation and unchanged composition on phone, tablet and desktop.
+
 # Unified Home and Artworks galleries
 - [x] Make both galleries caption-free for every artwork without altering detail pages or order.
 - [ ] Remove the second image's embedded white edge: requires an original photo without the edge; the supplied full-resolution original includes it and cropping is forbidden.
