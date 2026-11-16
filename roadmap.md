@@ -1,3 +1,10 @@
+# Additional Jost adjustments
+- [x] Enlarge hamburger labels to 18px and match Featured Works to Jost Regular with 0.28em tracking; verified menus on all pages and Home heading at 390/1440px, with Ablation and Inter unchanged and automatic build OK.
+
+# Navigation and exhibition refinement
+- [x] Apply locally hosted Jost navigation, clickable Ablation branding, understated About/Contact headings and consistent Inter informational text.
+- [x] Reduce both galleries to 4px mobile/8px desktop gutters and 8px gaps without changing sources, proportions or order; verified gallery layouts, Jost settings, home links, contact typography and artwork detail navigation at 390/768/1206/1440/1920px. Nine relevant regression tests passed, automatic build OK, no browser runtime errors.
+
 # Typography refinement
 - [x] Preserve Home Ablation typography and apply locally hosted Inter Regular/Medium everywhere else, with local font preloads and no third family.
 - [x] Verify loaded fonts, menu Regular/active Medium, artwork details and no overflow at 390/768/1002/1280px; 13 regression tests passed, automatic build OK and no browser runtime errors.

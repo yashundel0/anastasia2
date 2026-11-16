@@ -41,3 +41,4 @@ use the editor.
 - Keep contact destinations in the shared catalogue so the menu and Contact page cannot diverge.
 - Keep Home typography comparison in the existing header with one state-driven heading; font previews must not duplicate sections or artist names.
 - Self-host functional font weights through package assets and preload them alongside the brand font in the root head; Vite-managed URLs preserve loading under both preview and static deployment base paths.
+- Keep exhibition gutters and responsive image sizing in the shared gallery, with unconstrained page containers and intrinsic-size caps; this keeps both collections consistent without enlarging originals.
