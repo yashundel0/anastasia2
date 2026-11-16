@@ -32,7 +32,7 @@ function Index() {
         <div className="mb-10 flex flex-wrap items-center justify-between gap-6">
           <h2 className="display featured-heading text-4xl text-foreground">Featured Works</h2>
         </div>
-        <ArtworkGallery works={featuredArtworks} />
+        <ArtworkGallery works={featuredArtworks} showCaptions={false} />
       </main>
       <SiteFooter />
     </div>

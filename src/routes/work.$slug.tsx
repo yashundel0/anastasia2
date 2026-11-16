@@ -34,10 +34,14 @@ function Work() {
     <div className="min-h-screen bg-background">
       <SiteNav />
       <article key={work.slug} className="mx-auto max-w-[1200px] px-6 fade-up">
-        <h1 className="work-title display text-5xl text-foreground md:text-7xl">{work.title}</h1>
-        <p className="mt-3 text-sm text-muted-foreground">Original painting by Anastasia Evdokimova.{work.year ? ` ${work.year}.` : ""}{work.tags ? ` ${work.tags}.` : ""}</p>
-        <div className="work-frame mt-10 flex items-center justify-center bg-ink p-4 sm:p-6 md:p-16">
-          <ArtworkImage imageKey={work.slug as keyof typeof import("@/lib/image-metadata").imageMetadata} src={work.image} alt={work.year ? `${work.title}, ${work.year}` : work.title} fetchPriority="high" sizes="(min-width: 1200px) 1024px, (min-width: 768px) calc(100vw - 176px), calc(100vw - 80px)" className="work-image" />
+        <ArtworkImage imageKey={work.slug as keyof typeof import("@/lib/image-metadata").imageMetadata} src={work.image} alt={work.year ? `${work.title}, ${work.year}` : work.title} fetchPriority="high" sizes="(min-width: 1200px) 1152px, calc(100vw - 48px)" className="work-image" />
+        <div className="mx-auto mt-10 max-w-[760px] md:mt-14">
+          <h1 className="work-title display text-5xl text-foreground md:text-7xl">{work.title}</h1>
+          {work.year ? <p className="mt-4 text-sm text-muted-foreground">{work.year}</p> : null}
+          {work.tags ? <p className="mt-2 text-sm text-muted-foreground">{work.tags}</p> : null}
+          {work.description ? <div className="work-description mt-8 space-y-6 text-base text-foreground md:text-lg">
+            {work.description.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+          </div> : null}
         </div>
         <div className="work-navigation mt-10 grid grid-cols-2 gap-4">
           <Link to="/work/$slug" params={{ slug: prev.slug }} className="btn-outline-dark">← {prev.title}</Link>

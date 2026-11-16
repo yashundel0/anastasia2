@@ -1,3 +1,9 @@
+# Artwork display and Geometry of Time
+- [x] Diagnose fixed-ratio gallery padding and detail-page dark padded backgrounds.
+- [x] Remove image frames, retain original proportions and responsive lossless sources, and hide Home captions.
+- [x] Add supplied first-artwork metadata and complete description to its existing detail page, preserving image order.
+- [ ] Verify image display, detail navigation and description on desktop and mobile; run regression tests.
+
 # Two original artworks
 - [x] Download both originals from Yandex Disk at full resolution (2794×1572 and 6670×3746) and upload with lossless responsive variants.
 - [x] Replace all 17 placeholder works with the two originals: purple/blue/orange first, green/turquoise/red second, on Home and Artworks.
