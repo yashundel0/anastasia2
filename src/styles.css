@@ -141,8 +141,7 @@
 .hero-title { font-size: 40px; overflow-wrap: anywhere; }
 .hero-copy { padding-left: 16px; padding-right: 16px; }
 .hero-copy .btn-outline { max-width: 100%; overflow-wrap: anywhere; min-height: 44px; }
-.gallery-frame { padding: 3%; }
-.gallery-image { object-fit: scale-down; object-position: center; }
+.gallery-image { display: block; width: 100%; height: auto; max-width: 100%; object-fit: contain; object-position: center; }
 .studio-image { display: block; width: auto; height: auto; max-width: 100%; justify-self: center; align-self: start; }
 .about-layout { grid-template-columns: minmax(0, 1fr); }
 .about-title { font-size: 60px; }
@@ -150,8 +149,8 @@
 .site-nav .nav-link:last-child { justify-content: center; min-width: 44px; }
 .contact-details a { overflow-wrap: anywhere; width: fit-content; max-width: 100%; min-height: 44px; }
 .work-title { overflow-wrap: anywhere; }
-.work-frame { min-width: 0; }
-.work-image { display: block; width: auto; height: auto; max-width: 100%; max-height: 85svh; object-fit: contain; }
+.work-image { display: block; width: 100%; height: auto; max-width: 100%; object-fit: contain; }
+.work-description p { line-height: 1.8; }
 .work-navigation a { min-width: 0; min-height: 44px; overflow-wrap: anywhere; display: flex; align-items: center; }
 .work-navigation a:last-child { text-align: right; justify-content: flex-end; justify-self: end; }
 a:focus-visible { outline: 2px solid var(--ring); outline-offset: 4px; }
