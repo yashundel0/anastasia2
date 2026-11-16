@@ -3,7 +3,7 @@ import type { Artwork } from "@/lib/artworks";
 import { ArtworkImage } from "@/components/ArtworkImage";
 import type { imageMetadata } from "@/lib/image-metadata";
 
-export function ArtworkGallery({ works, showCaptions = true }: { works: readonly Artwork[]; showCaptions?: boolean }) {
+export function ArtworkGallery({ works, showCaptions = false }: { works: readonly Artwork[]; showCaptions?: boolean }) {
   return <div className="artwork-gallery grid grid-cols-1 gap-x-10 gap-y-14 md:grid-cols-2">
     {works.map((work) => <Link key={work.slug} to="/work/$slug" params={{ slug: work.slug }} aria-label={work.title} className="cover group block">
       <ArtworkImage imageKey={work.slug as keyof typeof imageMetadata} src={work.image} alt={work.title} loading="lazy" sizes="(min-width: 1560px) 620px, (min-width: 768px) 41vw, calc(100vw - 48px)" className="cover-img gallery-image" />
