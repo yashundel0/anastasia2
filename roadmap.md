@@ -1,5 +1,5 @@
 # Additional Jost adjustments
-- [ ] Enlarge hamburger labels and match Featured Works to Jost Regular with 0.28em tracking; verify phone and desktop without changing branding or body fonts.
+- [x] Enlarge hamburger labels to 18px and match Featured Works to Jost Regular with 0.28em tracking; verified menus on all pages and Home heading at 390/1440px, with Ablation and Inter unchanged and automatic build OK.
 
 # Navigation and exhibition refinement
 - [x] Apply locally hosted Jost navigation, clickable Ablation branding, understated About/Contact headings and consistent Inter informational text.
