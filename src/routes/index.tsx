@@ -23,10 +23,7 @@ function Index() {
       <header className="portfolio-hero relative flex items-center overflow-hidden bg-ink">
         <SiteNav overHero />
         <div className="hero-copy relative w-full text-center">
-          <h1 className="hero-title text-ink-foreground">
-            <span className="block">ANASTASIA</span>
-            <span className="block">EVDOKIMOVA</span>
-          </h1>
+          <h1 className="hero-title text-ink-foreground">EVDOKIMOVA ANASTASIA</h1>
           <p className="hero-subtitle text-ink-foreground">CONTEMPORARY ARTIST</p>
         </div>
       </header>
