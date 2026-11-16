@@ -32,7 +32,7 @@ export function SiteNav({ overHero = false }: { overHero?: boolean }) {
 
 export function SiteFooter() {
   return (
-    <footer className="mx-auto max-w-[1560px] px-6 py-16 text-xs uppercase tracking-widest text-muted-foreground md:px-[9%]">
+    <footer className="mx-auto max-w-[1560px] px-6 py-16 text-xs uppercase tracking-normal text-muted-foreground md:px-[9%]">
       © {new Date().getFullYear()} Anastasia Evdokimova — Moscow | Dubai
     </footer>
   );

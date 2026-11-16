@@ -11,6 +11,22 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/* Local functional typefaces; preloaded in the root head to avoid late swaps. */
+@font-face {
+  font-family: "Inter";
+  src: url("@fontsource/inter/files/inter-latin-400-normal.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: block;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("@fontsource/inter/files/inter-latin-500-normal.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: block;
+}
+
 /* Self-hosted Ablation (free demo, Regular only) — bundled by Vite so the
    relative URL inherits the correct base path on GitHub Pages. */
 @font-face {
@@ -19,7 +35,7 @@
     url("./assets/fonts/Ablation_PersonalUse.woff") format("woff");
   font-weight: 400;
   font-style: normal;
-  font-display: swap;
+  font-display: block;
 }
 
 /*
@@ -104,8 +120,8 @@
 @theme inline {
   --color-ink: var(--ink);
   --color-ink-foreground: var(--ink-foreground);
-  --font-sans: "Figtree", system-ui, sans-serif;
-  --font-display: "Bebas Neue", sans-serif;
+  --font-sans: "Inter", sans-serif;
+  --font-display: "Inter", sans-serif;
 }
 
 @layer base {
@@ -120,7 +136,7 @@
 }
 
 @layer base { body { font-family: var(--font-sans); } }
-.display { font-family: var(--font-display); text-transform: uppercase; letter-spacing: 0; }
+.display { font-family: var(--font-display); font-weight: 500; text-transform: uppercase; letter-spacing: 0; overflow-wrap: anywhere; line-height: 1.15; }
 .hero-shade { background: linear-gradient(90deg, color-mix(in oklab, var(--ink) 65%, transparent), transparent 70%); }
 .hero-zoom { animation: hero-zoom 18s ease-out both; }
 @keyframes hero-zoom { from { transform: scale(1.08); } to { transform: scale(1); } }
@@ -128,7 +144,8 @@
 .btn-outline:hover { background: var(--ink-foreground); color: var(--ink); }
 .btn-outline-dark { border:1px solid var(--foreground); color:var(--foreground); font-family:var(--font-display); font-size:1.3rem; padding:.5rem 1rem .35rem; transition: background .3s, color .3s; }
 .btn-outline-dark:hover { background: var(--foreground); color: var(--background); }
-.nav-link { font-size: .8rem; font-weight: 600; text-transform: uppercase; letter-spacing: .02em; color: var(--muted-foreground); transition: color .2s; }
+.nav-link { font-size: .8rem; font-weight: 400; text-transform: uppercase; letter-spacing: 0; color: var(--muted-foreground); transition: color .2s; }
+.nav-link-active { font-weight: 500; }
 .nav-link:hover, .nav-link-active { color: var(--foreground); }
 .cover-img { transition: transform .6s cubic-bezier(.2,.7,.2,1), opacity .4s; }
 .cover:hover .cover-img { opacity: .9; }
@@ -183,7 +200,7 @@ a:focus-visible { outline: 2px solid var(--ring); outline-offset: 4px; }
 @theme inline {
   --color-header-midnight: var(--header-midnight);
   --color-header-wine: var(--header-wine);
-  --font-home-display: "Barlow Condensed", "Bebas Neue", sans-serif;
+  --font-home-display: "Inter", sans-serif;
   --font-hero-display: "Ablation", sans-serif;
 }
 body { background: var(--portfolio-gradient); background-attachment: fixed; }
@@ -191,7 +208,7 @@ body > #root, .min-h-screen.bg-background { background: transparent; }
 .portfolio-hero { background: var(--hero-gradient); min-height: 85svh; justify-content: center; }
 .hero-texture { pointer-events: none; }
 .hero-shade { background: linear-gradient(90deg, color-mix(in oklab, var(--header-midnight) 90%, transparent), color-mix(in oklab, var(--header-midnight) 15%, transparent) 85%); }
-.hero-title, .featured-heading { font-family: var(--font-home-display); font-weight: 300; letter-spacing: 0; }
+.featured-heading { font-family: var(--font-home-display); font-weight: 500; letter-spacing: 0; }
 .hero-title { font-family: var(--font-hero-display); font-weight: 600; line-height: 1.08; font-size: clamp(22px, 5.8vw, 72px); letter-spacing: 0.04em; white-space: nowrap; overflow-wrap: normal; }
 .hero-copy { padding: 120px 24px; }
 .hero-subtitle { margin-top: 10px; font-family: var(--font-hero-display); font-size: 16px; font-weight: 300; letter-spacing: 0.35em; }
@@ -213,6 +230,10 @@ body > #root, .min-h-screen.bg-background { background: transparent; }
 .menu-links { display: flex; flex-direction: column; gap: 20px; margin-top: 64px; }
 .menu-links a { font-family: var(--font-display); font-size: 48px; font-weight: 400; line-height: 1.2; color: var(--muted-foreground); transition: color .2s; }
 .menu-links a:hover, .menu-links a.menu-link-active { color: var(--foreground); }
+.menu-links a.menu-link-active { font-weight: 500; }
+.menu-links a { letter-spacing: 0; overflow-wrap: anywhere; }
+.work-description { font-family: var(--font-sans); font-weight: 400; }
+.work-navigation a { font-weight: 400; line-height: 1.5; }
 .menu-email { margin-top: auto; overflow-wrap: anywhere; }
 .collection-link { border-radius: 0; min-height: 44px; font-weight: 400; }
 .collection-link:hover { background: var(--muted); color: var(--foreground); }

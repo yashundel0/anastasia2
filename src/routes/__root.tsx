@@ -11,6 +11,9 @@ import {
 import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
+import ablationFont from "../assets/fonts/ablation-regular.woff2?url";
+import interRegular from "@fontsource/inter/files/inter-latin-400-normal.woff2?url";
+import interMedium from "@fontsource/inter/files/inter-latin-500-normal.woff2?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 
 function NotFoundComponent() {
@@ -94,8 +97,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         rel: "stylesheet",
         href: appCss,
       },
-      { rel: "preconnect", href: "https://fonts.googleapis.com" },
-      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300&family=Bebas+Neue&family=Figtree:wght@300;400;600&display=swap" },
+      { rel: "preload", href: ablationFont, as: "font", type: "font/woff2", crossOrigin: "anonymous" },
+      { rel: "preload", href: interRegular, as: "font", type: "font/woff2", crossOrigin: "anonymous" },
+      { rel: "preload", href: interMedium, as: "font", type: "font/woff2", crossOrigin: "anonymous" },
       { rel: "icon", href: `${import.meta.env.BASE_URL}favicon.ico`, type: "image/x-icon" },
     ],
   }),

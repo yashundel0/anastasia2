@@ -40,3 +40,4 @@ use the editor.
 - Use the shared Sheet and Button for header navigation to retain focus management and keyboard dismissal on every page.
 - Keep contact destinations in the shared catalogue so the menu and Contact page cannot diverge.
 - Keep Home typography comparison in the existing header with one state-driven heading; font previews must not duplicate sections or artist names.
+- Self-host functional font weights through package assets and preload them alongside the brand font in the root head; Vite-managed URLs preserve loading under both preview and static deployment base paths.
