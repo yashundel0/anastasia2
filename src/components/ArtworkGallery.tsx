@@ -12,8 +12,8 @@ export function ArtworkGallery({ works }: { works: readonly Artwork[] }) {
       <div className="pt-5">
         <h2 className="text-lg font-normal text-foreground">{work.title}</h2>
         <p className="mt-1 text-sm text-muted-foreground">Original painting by Anastasia Evdokimova.</p>
-        <p className="mt-3 text-xs text-muted-foreground">{work.year}</p>
-        <p className="text-xs text-muted-foreground">{work.tags}</p>
+        {work.year ? <p className="mt-3 text-xs text-muted-foreground">{work.year}</p> : null}
+        {work.tags ? <p className="text-xs text-muted-foreground">{work.tags}</p> : null}
       </div>
     </Link>)}
   </div>;

@@ -1,4 +1,26 @@
 export const imageMetadata = {
+  "artwork-1": {
+    "width": 2794,
+    "height": 1572,
+    "sources": [
+      { "width": 320, "url": "/__l5e/assets-v1/7aa6961e-59bc-43d3-bc5b-8ac40fbd47db/artwork-1-320.webp" },
+      { "width": 640, "url": "/__l5e/assets-v1/2f519b0f-8d53-47f8-ad3c-4cb988939ecc/artwork-1-640.webp" },
+      { "width": 1024, "url": "/__l5e/assets-v1/668b5c79-b6e8-4484-8356-78e7f52e139e/artwork-1-1024.webp" },
+      { "width": 2048, "url": "/__l5e/assets-v1/546a78e7-eff1-4617-a4c7-8257af29e972/artwork-1-2048.webp" },
+      { "width": 2794, "url": "/__l5e/assets-v1/7af1076c-ba9c-4a98-b84e-7a062d04b0ab/artwork-1.jpeg" }
+    ]
+  },
+  "artwork-2": {
+    "width": 6670,
+    "height": 3746,
+    "sources": [
+      { "width": 320, "url": "/__l5e/assets-v1/14855ae7-8361-4c00-8b46-0cc5f6e1e443/artwork-2-320.webp" },
+      { "width": 640, "url": "/__l5e/assets-v1/af65d2da-db12-453d-92f2-926f3b766c16/artwork-2-640.webp" },
+      { "width": 1024, "url": "/__l5e/assets-v1/8286d7bf-8b0f-442d-bfa4-462c57ce5a8a/artwork-2-1024.webp" },
+      { "width": 2048, "url": "/__l5e/assets-v1/4f89b970-9e05-405b-b0e3-0efa70373291/artwork-2-2048.webp" },
+      { "width": 6670, "url": "/__l5e/assets-v1/37463581-19b1-40bd-ba2f-ed0bb8d4613f/artwork-2.jpg" }
+    ]
+  },
   "artist-portrait": {
     "width": 1191,
     "height": 1321,

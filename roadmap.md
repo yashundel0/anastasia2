@@ -1,3 +1,9 @@
+# Two original artworks
+- [x] Download both originals from Yandex Disk at full resolution (2794×1572 and 6670×3746) and upload with lossless responsive variants.
+- [x] Replace all 17 placeholder works with the two originals: purple/blue/orange first, green/turquoise/red second, on Home and Artworks.
+- [x] Keep titles/dates/materials neutral (Untitled, no year/tags) until the artist provides them.
+- [x] Verify order, image loading, detail pages and layouts at 375/1280px; 11 tests passed, automatic build OK, no console errors.
+
 # Reference typography
 - [x] Replace only Home name/subtitle typography with thin, wide Montserrat lettering (200/100 weights); exact source font unconfirmed.
 - [x] Verify font loading, one heading/section, no overflow at 375/1001/1280px, unchanged menu navigation; routing test passed, automatic build OK.
