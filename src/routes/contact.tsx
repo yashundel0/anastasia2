@@ -21,12 +21,12 @@ function Contact() {
     <div className="min-h-screen bg-background">
       <SiteNav />
       <main className="mx-auto max-w-[1200px] px-6 fade-up">
-        <h1 className="display text-6xl text-foreground md:text-9xl">C0NTACT \\</h1>
-        <div className="contact-details mt-12 space-y-6 text-2xl md:text-4xl">
+        <h1 className="page-heading text-foreground">Contact</h1>
+        <div className="contact-details mt-8 space-y-6 text-base md:text-lg">
           <a href={`mailto:${contact.email}`} className="block text-foreground underline-offset-8 hover:underline">{contact.email}</a>
           <a href={contact.phoneHref} className="block text-foreground underline-offset-8 hover:underline">{contact.phone}</a>
           <a href={contact.instagram} target="_blank" rel="noopener noreferrer" className="block text-foreground underline-offset-8 hover:underline">Instagram ↗</a>
-          <p className="display text-muted-foreground">{contact.cities}</p>
+          <p className="text-muted-foreground">{contact.cities}</p>
         </div>
       </main>
       <SiteFooter />

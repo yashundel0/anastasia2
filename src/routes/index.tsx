@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { featuredArtworks } from "@/lib/artworks";
 import { SiteNav, SiteFooter } from "@/components/SiteNav";
 import { ArtworkGallery } from "@/components/ArtworkGallery";
@@ -23,13 +23,13 @@ function Index() {
       <header className="portfolio-hero relative flex items-center overflow-hidden bg-ink">
         <SiteNav overHero />
         <div className="hero-copy relative w-full text-center">
-          <h1 className="hero-title text-ink-foreground">EVDOKIMOVA ANASTASIA</h1>
+          <h1 className="hero-title text-ink-foreground"><Link to="/" className="artist-home-link">EVDOKIMOVA ANASTASIA</Link></h1>
           <p className="hero-subtitle text-ink-foreground">CONTEMPORARY ARTIST</p>
         </div>
       </header>
 
-      <main id="work" className="mx-auto max-w-[1560px] px-6 pt-10 md:px-[9%]">
-        <div className="mb-10 flex flex-wrap items-center justify-between gap-6">
+      <main id="work" className="exhibition-main pt-10">
+        <div className="mb-10 flex flex-wrap items-center justify-between gap-6 px-6 md:px-[9%]">
           <h2 className="display featured-heading text-4xl text-foreground">Featured Works</h2>
         </div>
         <ArtworkGallery works={featuredArtworks} showCaptions={false} />

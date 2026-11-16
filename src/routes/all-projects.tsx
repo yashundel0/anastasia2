@@ -17,8 +17,8 @@ export const Route = createFileRoute("/all-projects")({
 function AllProjects() {
   return <div className="min-h-screen bg-background">
     <SiteNav />
-    <main className="mx-auto max-w-[1560px] px-6 md:px-[9%] fade-up">
-      <h1 className="display mb-12 text-6xl text-foreground md:text-8xl">Artworks</h1>
+    <main className="exhibition-main fade-up">
+      <h1 className="display mb-12 px-6 text-6xl text-foreground md:px-[9%] md:text-8xl">Artworks</h1>
       <ArtworkGallery works={artworks} />
     </main>
     <SiteFooter />
