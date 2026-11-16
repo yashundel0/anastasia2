@@ -193,12 +193,10 @@ body > #root, .min-h-screen.bg-background { background: transparent; }
 .hero-texture { pointer-events: none; }
 .hero-shade { background: linear-gradient(90deg, color-mix(in oklab, var(--header-midnight) 90%, transparent), color-mix(in oklab, var(--header-midnight) 15%, transparent) 85%); }
 .hero-title, .featured-heading { font-family: var(--font-home-display); font-weight: 300; letter-spacing: 0; }
-.hero-title { font-family: var(--font-hero-display); font-weight: 600; line-height: 1.08; font-size: 88px; letter-spacing: 0.04em; }
+.hero-title { font-family: var(--font-hero-display); font-weight: 600; line-height: 1.08; font-size: clamp(22px, 5.8vw, 72px); letter-spacing: 0.04em; white-space: nowrap; overflow-wrap: normal; }
 .hero-copy { padding: 120px 24px; }
 .hero-subtitle { margin-top: 28px; font-family: var(--font-hero-display); font-size: 20px; font-weight: 300; letter-spacing: 0.35em; }
-@media (min-width: 768px) and (max-width: 1023px) {
-  .hero-title { font-size: 68px; }
-}
+
 .hero-art { left: 35%; width: 65%; }
 .hero-action { background: transparent; color: var(--ink-foreground); border-color: color-mix(in oklab, var(--ink-foreground) 50%, transparent); border-radius: 0; font-weight: 300; font-size: 16px; height: auto; min-height: 44px; white-space: normal; }
 .hero-action:hover { background: var(--ink-foreground); color: var(--header-midnight); }
@@ -223,7 +221,6 @@ body > #root, .min-h-screen.bg-background { background: transparent; }
   .hero-art { left: 0; width: 100%; }
   .hero-copy { padding: 100px 24px 120px; }
   .hero-shade { background: color-mix(in oklab, var(--header-midnight) 65%, transparent); }
-  .hero-title { font-size: 40px; }
   .hero-subtitle { font-size: 14px; margin-top: 24px; }
 }
 @media (prefers-reduced-motion: reduce) {
