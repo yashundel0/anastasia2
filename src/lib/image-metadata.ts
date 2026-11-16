@@ -1,3 +1,5 @@
+import artwork2Original from "@/assets/art/artwork-2-original-borderless.jpg.asset.json";
+
 export const imageMetadata = {
   "artwork-1": {
     "width": 2794,
@@ -11,14 +13,10 @@ export const imageMetadata = {
     ]
   },
   "artwork-2": {
-    "width": 6670,
-    "height": 3746,
+    "width": 1280,
+    "height": 702,
     "sources": [
-      { "width": 320, "url": "/__l5e/assets-v1/14855ae7-8361-4c00-8b46-0cc5f6e1e443/artwork-2-320.webp" },
-      { "width": 640, "url": "/__l5e/assets-v1/af65d2da-db12-453d-92f2-926f3b766c16/artwork-2-640.webp" },
-      { "width": 1024, "url": "/__l5e/assets-v1/8286d7bf-8b0f-442d-bfa4-462c57ce5a8a/artwork-2-1024.webp" },
-      { "width": 2048, "url": "/__l5e/assets-v1/4f89b970-9e05-405b-b0e3-0efa70373291/artwork-2-2048.webp" },
-      { "width": 6670, "url": "/__l5e/assets-v1/37463581-19b1-40bd-ba2f-ed0bb8d4613f/artwork-2.jpg" }
+      { "width": 1280, "url": artwork2Original.url }
     ]
   },
   "artist-portrait": {
