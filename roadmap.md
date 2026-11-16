@@ -1,6 +1,6 @@
 # Navigation and exhibition refinement
-- [ ] Apply locally hosted Jost navigation, clickable Ablation branding, understated About/Contact headings and consistent Inter informational text.
-- [ ] Reduce both galleries to minimal gutters and gaps without changing sources, proportions or order; verify navigation and layouts on phone, tablet, laptop and desktop.
+- [x] Apply locally hosted Jost navigation, clickable Ablation branding, understated About/Contact headings and consistent Inter informational text.
+- [x] Reduce both galleries to 4px mobile/8px desktop gutters and 8px gaps without changing sources, proportions or order; verified gallery layouts, Jost settings, home links, contact typography and artwork detail navigation at 390/768/1206/1440/1920px. Nine relevant regression tests passed, automatic build OK, no browser runtime errors.
 
 # Typography refinement
 - [x] Preserve Home Ablation typography and apply locally hosted Inter Regular/Medium everywhere else, with local font preloads and no third family.
