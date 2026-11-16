@@ -1,3 +1,7 @@
+# Typography refinement
+- [x] Preserve Home Ablation typography and apply locally hosted Inter Regular/Medium everywhere else, with local font preloads and no third family.
+- [x] Verify loaded fonts, menu Regular/active Medium, artwork details and no overflow at 390/768/1002/1280px; 13 regression tests passed, automatic build OK and no browser runtime errors.
+
 # Unified Home and Artworks galleries
 - [x] Make both galleries caption-free for every artwork without altering detail pages or order.
 - [ ] Remove the second image's embedded white edge: requires an original photo without the edge; the supplied full-resolution original includes it and cropping is forbidden.
