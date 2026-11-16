@@ -130,6 +130,7 @@
   --font-sans: "Inter", sans-serif;
   --font-display: "Inter", sans-serif;
   --font-navigation: "Jost", sans-serif;
+  --text-menu: 1.125rem;
 }
 
 @layer base {
@@ -214,7 +215,7 @@ body > #root, .min-h-screen.bg-background { background: transparent; }
 .portfolio-hero { background: var(--hero-gradient); min-height: 85svh; justify-content: center; }
 .hero-texture { pointer-events: none; }
 .hero-shade { background: linear-gradient(90deg, color-mix(in oklab, var(--header-midnight) 90%, transparent), color-mix(in oklab, var(--header-midnight) 15%, transparent) 85%); }
-.featured-heading { font-family: var(--font-home-display); font-weight: 500; letter-spacing: 0; }
+.featured-heading { font-family: var(--font-navigation); font-size: var(--text-menu); font-weight: 400; letter-spacing: .28em; text-transform: none; line-height: 1.5; }
 .hero-title { font-family: var(--font-hero-display); font-weight: 600; line-height: 1.08; font-size: clamp(22px, 5.8vw, 72px); letter-spacing: 0.04em; white-space: nowrap; overflow-wrap: normal; }
 .hero-copy { padding: 120px 24px; }
 .hero-subtitle { margin-top: 10px; font-family: var(--font-hero-display); font-size: 16px; font-weight: 300; letter-spacing: 0.35em; }
@@ -236,7 +237,7 @@ body > #root, .min-h-screen.bg-background { background: transparent; }
 .about-copy p { line-height: 1.8; }
 .portfolio-menu > button { min-width: 44px; min-height: 44px; }
 .menu-links { display: flex; flex-direction: column; gap: 8px; margin-top: 64px; }
-.menu-links a { display: flex; align-items: center; min-height: 44px; font-family: var(--font-navigation); font-size: .68rem; font-weight: 400; line-height: 1.5; letter-spacing: .28em; text-transform: none; color: var(--foreground); transition: opacity .2s; overflow-wrap: anywhere; }
+.menu-links a { display: flex; align-items: center; min-height: 44px; font-family: var(--font-navigation); font-size: var(--text-menu); font-weight: 400; line-height: 1.5; letter-spacing: .28em; text-transform: none; color: var(--foreground); transition: opacity .2s; overflow-wrap: anywhere; }
 .menu-links a:hover { opacity: .75; }
 .menu-links a.menu-link-active { text-decoration: underline; text-underline-offset: 6px; }
 .work-description { font-family: var(--font-sans); font-weight: 400; }
@@ -246,7 +247,6 @@ body > #root, .min-h-screen.bg-background { background: transparent; }
 .collection-link:hover { background: var(--muted); color: var(--foreground); }
 @media (max-width: 767px) {
   main > h1.display { font-size: 42px; }
-  .featured-heading { font-size: 30px; }
   .hero-art { left: 0; width: 100%; }
   .hero-copy { padding: 100px 24px 120px; }
   .hero-shade { background: color-mix(in oklab, var(--header-midnight) 65%, transparent); }
