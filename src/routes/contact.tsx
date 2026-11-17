@@ -21,7 +21,6 @@ function Contact() {
     <div className="min-h-screen bg-background">
       <SiteNav />
       <main className="mx-auto max-w-[1200px] px-6 fade-up">
-        <h1 className="page-heading text-foreground">Contact</h1>
         <div className="contact-details mt-8 text-base md:text-lg">
           <section aria-labelledby="contact-details-heading" className="contact-section">
             <h2 id="contact-details-heading" className="contact-section-label text-muted-foreground">Contact Details</h2>

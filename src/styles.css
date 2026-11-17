@@ -266,9 +266,18 @@ main > h1.display.artworks-heading, .artworks-heading { font-size: 20px; font-we
 .menu-links a, .featured-heading { text-transform: uppercase; font-size: 18px; }
 main > h1.display.artworks-heading, .artworks-heading { text-transform: uppercase; font-size: 18px; }
 .menu-links a, .featured-heading, main > h1.display.artworks-heading, .artworks-heading { font-size: 15px; }
-/* Frameless close icon, centred on the menu surname line. */
-.portfolio-menu > .site-identity { line-height: 44px; }
-.portfolio-menu > button { top: 80px; right: 24px; height: 44px; display: flex; align-items: center; justify-content: center; background: transparent !important; border: 0; border-radius: 0; box-shadow: none !important; --tw-ring-shadow: 0 0 #0000; }
+/* One shared header line, including the open navigation. */
+:root { --header-gutter: 24px; --header-top: 16px; }
+.site-header-inner { width: 100%; max-width: 1560px; margin-inline: auto; padding: var(--header-top) var(--header-gutter); display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.menu-header { position: absolute; inset: 0 0 auto; pointer-events: none; }
+.menu-header .site-identity { pointer-events: auto; }
+.menu-header .site-identity { font-size: 22px; line-height: 48px; }
+.portfolio-menu { width: 100%; max-width: none; border: 0; }
+.menu-body { width: min(356px, 100%); margin-left: auto; flex: 1; min-height: 0; display: flex; flex-direction: column; }
+.menu-body .menu-links { margin-top: 124px; }
+.artwork-detail-heading { font-family: var(--font-navigation); font-size: 20px; font-weight: 400; line-height: 1.5; letter-spacing: .28em; }
+@media (min-width: 768px) { :root { --header-gutter: 40px; } }
+.portfolio-menu > button { top: var(--header-top); right: max(var(--header-gutter), calc((100vw - 1560px) / 2 + var(--header-gutter))); width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; background: transparent !important; border: 0; border-radius: 0; box-shadow: none !important; }
 .portfolio-menu > button svg { width: 20px; height: 20px; }
 .portfolio-menu > button, .portfolio-menu > button:focus, .portfolio-menu > button:focus-visible, .portfolio-menu > button:active { -webkit-appearance: none; appearance: none; -webkit-tap-highlight-color: transparent; outline: none !important; background: transparent !important; border: 0 !important; box-shadow: none !important; padding: 0; }
 .portfolio-menu > button::before, .portfolio-menu > button::after { content: none !important; }
