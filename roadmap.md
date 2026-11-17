@@ -1,6 +1,6 @@
 # Restore compact navigation
-- [ ] Restore original menu proportions and spacing with aligned frameless X; hide Home surname and minimize internal header edge margins.
-- [ ] Uppercase Geometry of Time without changing its font or size; verify every page and menu on phone and desktop.
+- [x] Restore original 420px menu proportions (capped at available phone width) and spacing with aligned frameless X; hide Home surname and minimize internal header edge margins.
+- [x] Uppercase Geometry of Time without changing its font or size; verified every page, menu close/navigation and internal Home links at 390/768/1280px; six regression tests passed, automatic build OK.
 
 # Shared header alignment
 - [x] Raise regular and open-menu headers, align surname and controls across all pages, and keep the close icon frameless.
