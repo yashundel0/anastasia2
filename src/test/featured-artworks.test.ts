@@ -6,11 +6,7 @@ describe("Featured selection", () => {
     expect(artworks.map((work) => work.slug)).toEqual(["artwork-1", "artwork-2"]);
     expect(featuredArtworks).toEqual(artworks);
   });
-  it("keeps the second artwork's details neutral until the artist provides them", () => {
-    for (const work of artworks.slice(1)) {
-      expect(work.title).toBe("Untitled");
-      expect(work.year).toBeNull();
-      expect(work.tags).toBe("");
-    }
+  it("identifies the second artwork with the supplied title", () => {
+    expect(artworks[1]?.title).toBe("ENTROPY");
   });
 });

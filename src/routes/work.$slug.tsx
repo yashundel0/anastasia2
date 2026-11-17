@@ -36,7 +36,7 @@ function Work() {
       <article key={work.slug} className="mx-auto max-w-[1200px] px-6 fade-up">
         <ArtworkImage imageKey={work.slug as keyof typeof import("@/lib/image-metadata").imageMetadata} src={work.image} alt={work.year ? `${work.title}, ${work.year}` : work.title} fetchPriority="high" sizes="(min-width: 1200px) 1152px, calc(100vw - 48px)" className="work-image" />
         <div className="mx-auto mt-10 max-w-[760px] md:mt-14">
-          <h1 className={work.slug === "artwork-1" ? "work-title artwork-detail-heading text-foreground" : "work-title display text-5xl text-foreground md:text-7xl"}>{work.title}</h1>
+          <h1 className="work-title artwork-detail-heading text-foreground">{work.title}</h1>
           {work.year ? <p className="mt-4 text-sm text-muted-foreground">{work.year}</p> : null}
           {work.tags ? <p className="mt-2 text-sm text-muted-foreground">{work.tags}</p> : null}
           {work.description ? <div className="work-description mt-8 space-y-6 text-base text-foreground md:text-lg">
