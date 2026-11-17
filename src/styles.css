@@ -269,5 +269,7 @@ main > h1.display.artworks-heading, .artworks-heading { text-transform: uppercas
 /* Frameless close icon, centred on the menu surname line. */
 .portfolio-menu > .site-identity { line-height: 44px; }
 .portfolio-menu > button { top: 80px; right: 24px; height: 44px; display: flex; align-items: center; justify-content: center; background: transparent !important; border: 0; border-radius: 0; box-shadow: none !important; --tw-ring-shadow: 0 0 #0000; }
-.portfolio-menu > button:focus-visible { outline: 1px solid var(--foreground); outline-offset: 2px; }
 .portfolio-menu > button svg { width: 20px; height: 20px; }
+.portfolio-menu > button, .portfolio-menu > button:focus, .portfolio-menu > button:focus-visible, .portfolio-menu > button:active { -webkit-appearance: none; appearance: none; -webkit-tap-highlight-color: transparent; outline: none !important; background: transparent !important; border: 0 !important; box-shadow: none !important; padding: 0; }
+.portfolio-menu > button::before, .portfolio-menu > button::after { content: none !important; }
+.portfolio-menu > button:focus-visible { opacity: 1; }
