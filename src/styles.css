@@ -265,3 +265,4 @@ main > h1.display.artworks-heading, .artworks-heading { font-size: 20px; font-we
 /* Uppercase navigation and section labels, never larger than the surname. */
 .menu-links a, .featured-heading { text-transform: uppercase; font-size: 18px; }
 main > h1.display.artworks-heading, .artworks-heading { text-transform: uppercase; font-size: 18px; }
+.menu-links a, .featured-heading, main > h1.display.artworks-heading, .artworks-heading { font-size: 15px; }
