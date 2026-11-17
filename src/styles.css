@@ -269,9 +269,9 @@ main > h1.display.artworks-heading, .artworks-heading { text-transform: uppercas
 /* Compact original menu, independent of the regular header's edge margins. */
 :root { --header-gutter: 12px; --header-top: 16px; }
 .site-header-inner { width: 100%; padding: var(--header-top) var(--header-gutter); display: flex; align-items: center; justify-content: space-between; gap: 24px; }
-.portfolio-menu > .site-identity { line-height: 44px; }
+.portfolio-menu > .site-identity { line-height: 44px; transform: translateY(-64px); }
 .artwork-detail-heading { font-family: var(--font-navigation); font-size: 20px; font-weight: 400; line-height: 1.5; letter-spacing: .28em; text-transform: uppercase; }
-.portfolio-menu > button { top: 80px; right: 24px; width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; background: transparent !important; border: 0; border-radius: 0; box-shadow: none !important; }
+.portfolio-menu > button { top: 16px; right: 24px; width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; background: transparent !important; border: 0; border-radius: 0; box-shadow: none !important; }
 .portfolio-menu > button svg { width: 20px; height: 20px; }
 .portfolio-menu > button, .portfolio-menu > button:focus, .portfolio-menu > button:focus-visible, .portfolio-menu > button:active { -webkit-appearance: none; appearance: none; -webkit-tap-highlight-color: transparent; outline: none !important; background: transparent !important; border: 0 !important; box-shadow: none !important; padding: 0; }
 .portfolio-menu > button::before, .portfolio-menu > button::after { content: none !important; }
