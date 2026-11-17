@@ -1,6 +1,6 @@
 # Entropy artwork details
-- [ ] Add the supplied title, year, dimensions and complete six-paragraph description to Artwork No. 2.
-- [ ] Match both artwork pages' typography and spacing; verify both pages and navigation on phone and desktop without changing images.
+- [x] Add the supplied title, year, dimensions and complete six-paragraph description to Artwork No. 2.
+- [x] Match both artwork pages' typography and spacing; verified exact complete text, matching computed typography and gallery/detail/navigation at 390/1280px with unchanged images; eight regression tests passed, automatic build OK.
 
 # Restore compact navigation
 - [x] Restore original 420px menu proportions (capped at available phone width) and spacing with aligned frameless X; hide Home surname and minimize internal header edge margins.
