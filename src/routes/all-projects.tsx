@@ -18,7 +18,7 @@ function AllProjects() {
   return <div className="min-h-screen bg-background">
     <SiteNav />
     <main className="exhibition-main fade-up">
-      <h1 className="display artworks-heading mb-12 px-6 text-foreground md:px-[9%]">Artworks</h1>
+      <div className="mx-auto max-w-[1560px] px-6 md:px-10"><h1 className="display artworks-heading mb-12 text-foreground">Artworks</h1></div>
       <ArtworkGallery works={artworks} />
     </main>
     <SiteFooter />
