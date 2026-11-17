@@ -269,7 +269,8 @@ main > h1.display.artworks-heading, .artworks-heading { text-transform: uppercas
 /* One shared header line, including the open navigation. */
 :root { --header-gutter: 24px; --header-top: 16px; }
 .site-header-inner { width: 100%; max-width: 1560px; margin-inline: auto; padding: var(--header-top) var(--header-gutter); display: flex; align-items: center; justify-content: space-between; gap: 24px; }
-.menu-header { position: absolute; inset: 0 0 auto; }
+.menu-header { position: absolute; inset: 0 0 auto; pointer-events: none; }
+.menu-header .site-identity { pointer-events: auto; }
 .menu-header .site-identity { font-size: 22px; line-height: 48px; }
 .portfolio-menu { width: 100%; max-width: none; border: 0; }
 .menu-body { width: min(356px, 100%); margin-left: auto; flex: 1; min-height: 0; display: flex; flex-direction: column; }
