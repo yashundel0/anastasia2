@@ -32,7 +32,6 @@ function Contact() {
             <h2 id="contact-social-heading" className="contact-section-label text-muted-foreground">Social</h2>
             <a href={contact.instagram} target="_blank" rel="noopener noreferrer" className="block text-foreground underline-offset-8 hover:underline">Instagram ↗</a>
           </section>
-          <p className="pt-8 text-muted-foreground">{contact.cities}</p>
         </div>
       </main>
       <SiteFooter />
