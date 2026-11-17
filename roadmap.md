@@ -1,3 +1,7 @@
+# Entropy artwork details
+- [ ] Add the supplied title, year, dimensions and complete six-paragraph description to Artwork No. 2.
+- [ ] Match both artwork pages' typography and spacing; verify both pages and navigation on phone and desktop without changing images.
+
 # Restore compact navigation
 - [x] Restore original 420px menu proportions (capped at available phone width) and spacing with aligned frameless X; hide Home surname and minimize internal header edge margins.
 - [x] Uppercase Geometry of Time without changing its font or size; verified every page, menu close/navigation and internal Home links at 390/768/1280px; six regression tests passed, automatic build OK.

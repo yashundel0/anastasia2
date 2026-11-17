@@ -25,7 +25,17 @@ export const artworks: Artwork[] = [
       "Where time ceases to be a unit of measurement, it becomes a mode of matter’s existence.",
     ],
   },
-  a("artwork-2", "Untitled", null, artwork2.url, ""),
+  {
+    ...a("artwork-2", "ENTROPY", 2021, artwork2.url, "140 × 250 cm | Acrylic on canvas"),
+    description: [
+      "When I started working on this large-scale canvas, I wanted to explore something truly monumental. And I couldn’t imagine anything more monumental than the history of the universe.",
+      "This is how Entropy came to be — my attempt to artistically reinterpret the Big Bang, an event almost impossible to fathom in its entirety.",
+      "Since the dawn of the universe, space has been expanding, matter transforming, and entire worlds arising and vanishing. Entropy is tied to the irreversibility of natural processes and the direction of change that continues throughout cosmic history.",
+      "In a sense, we are still living through the consequences of the Big Bang. We exist within an extraordinarily complex system that we cannot fully comprehend.",
+      "Through abstract forms, symbols, and recognizable human figures, I sought to convey a space where everything constantly emerges, changes, and transforms. We are merely observers.",
+      "We try to explain the world through familiar images, knowledge, and perceptions. But how much can our perception truly grasp of everything that has happened, is happening now, and has yet to unfold? And to what extent do our ideas about the world correspond to reality itself?",
+    ],
+  },
 ];
 
 export const featuredArtworks = artworks;
