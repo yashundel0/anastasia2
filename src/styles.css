@@ -266,3 +266,8 @@ main > h1.display.artworks-heading, .artworks-heading { font-size: 20px; font-we
 .menu-links a, .featured-heading { text-transform: uppercase; font-size: 18px; }
 main > h1.display.artworks-heading, .artworks-heading { text-transform: uppercase; font-size: 18px; }
 .menu-links a, .featured-heading, main > h1.display.artworks-heading, .artworks-heading { font-size: 15px; }
+/* Frameless close icon, centred on the menu surname line. */
+.portfolio-menu > .site-identity { line-height: 44px; }
+.portfolio-menu > button { top: 80px; right: 24px; height: 44px; display: flex; align-items: center; justify-content: center; background: transparent !important; border: 0; border-radius: 0; box-shadow: none !important; --tw-ring-shadow: 0 0 #0000; }
+.portfolio-menu > button:focus-visible { outline: 1px solid var(--foreground); outline-offset: 2px; }
+.portfolio-menu > button svg { width: 20px; height: 20px; }
