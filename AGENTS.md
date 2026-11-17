@@ -38,7 +38,7 @@ use the editor.
 - Render featured and complete collections through ArtworkGallery from one catalogue; keeping the curated selection separate preserves every detail page.
 - Store supplied artwork descriptions in the catalogue and render them on existing detail routes; gallery captions are optional so Home stays image-only.
 - Use the shared Sheet and Button for header navigation to retain focus management and keyboard dismissal on every page.
-- Share header gutter and top-offset tokens between the regular header and full-width Sheet header so branding and open/close controls align at every viewport size.
+- Keep the compact Sheet's original width and internal spacing independent of regular header edge tokens so header alignment changes cannot expand the menu.
 - Keep contact destinations in the shared catalogue so the menu and Contact page cannot diverge.
 - Keep Home typography comparison in the existing header with one state-driven heading; font previews must not duplicate sections or artist names.
 - Self-host functional font weights through package assets and preload them alongside the brand font in the root head; Vite-managed URLs preserve loading under both preview and static deployment base paths.
