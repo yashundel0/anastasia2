@@ -255,3 +255,10 @@ body > #root, .min-h-screen.bg-background { background: transparent; }
 @media (prefers-reduced-motion: reduce) {
   .portfolio-menu, .portfolio-menu[data-state], .menu-links a, .site-identity, .artist-home-link { animation: none; transition: none; }
 }
+/* Consistent surname header, compact Artworks heading, sectioned Contact. */
+.site-header .site-identity { font-size: 22px; line-height: 48px; }
+main > h1.display.artworks-heading, .artworks-heading { font-size: 20px; font-weight: 400; line-height: 1.3; }
+.contact-section { border-top: 1px solid color-mix(in oklab, var(--border) 70%, transparent); padding: 32px 0; display: flex; flex-direction: column; gap: 12px; }
+.contact-section:last-of-type { border-bottom: 1px solid color-mix(in oklab, var(--border) 70%, transparent); }
+.contact-section-label { font-family: var(--font-navigation); font-size: 12px; letter-spacing: .28em; text-transform: uppercase; margin-bottom: 8px; }
+.contact-details a { display: flex; align-items: center; }
