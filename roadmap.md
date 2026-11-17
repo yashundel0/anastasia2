@@ -1,3 +1,7 @@
+# About heading typography
+- [x] Set the ABOUT heading in the same Jost style as Featured Works (uppercase, Regular, 0.28em, 15px) with its position unchanged.
+- [x] Verified identical computed typography on Home and About at 390/1280px, biography typography untouched, no browser errors, automatic build OK.
+
 # Entropy artwork details
 - [x] Add the supplied title, year, dimensions and complete six-paragraph description to Artwork No. 2.
 - [x] Match both artwork pages' typography and spacing; verified exact complete text, matching computed typography and gallery/detail/navigation at 390/1280px with unchanged images; eight regression tests passed, automatic build OK.

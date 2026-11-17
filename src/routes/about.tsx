@@ -24,7 +24,7 @@ function About() {
       <main className="about-layout mx-auto grid max-w-[1200px] gap-8 px-6 fade-up md:grid-cols-2 lg:gap-12">
         <ArtworkImage imageKey="artist-portrait" src={portraitImage} alt="Anastasia Evdokimova in her studio" fetchPriority="high" className="studio-image" sizes="(min-width: 1200px) 552px, (min-width: 768px) 46vw, calc(100vw - 48px)" />
         <div className="about-copy min-w-0">
-          <h1 className="page-heading text-foreground">About</h1>
+          <h1 className="featured-heading text-foreground">About</h1>
           <div className="mt-8 space-y-6 leading-relaxed text-foreground">
             <p>Anastasia Evdokimova is a contemporary artist living and working in Dubai. In her practice, abstraction and surrealism become a means of exploring the nature of reality and the limits of human perception.</p>
             <p>Anastasia grew up in a family where art was an integral part of life, independent of professional ambitions. Painting, sculpture, and the creation of bas-reliefs coexisted with technical craftsmanship and engineering.</p>
