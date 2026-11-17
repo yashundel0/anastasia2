@@ -1,3 +1,8 @@
+# Shared header alignment
+- [ ] Raise regular and open-menu headers, align surname and controls across all pages, and keep the close icon frameless.
+- [ ] Refine Geometry of Time title and remove only the standalone Contact heading.
+- [ ] Verify desktop/mobile positioning, menu interactions, contact information and regression tests.
+
 # Additional Jost adjustments
 - [x] Enlarge hamburger labels to 18px and match Featured Works to Jost Regular with 0.28em tracking; verified menus on all pages and Home heading at 390/1440px, with Ablation and Inter unchanged and automatic build OK.
 
